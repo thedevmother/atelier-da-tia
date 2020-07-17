@@ -5,11 +5,12 @@ import Navbar from '../components/Navbar'
 import './all.sass'
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
+import background from '../img/background-clouds.png'
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
   return (
-    <div>
+    <div className="default-background" style={{ background: `url(${background}), #ffe8f0` }}>
       <Helmet>
         <html lang="en" />
         <title>{title}</title>
@@ -49,7 +50,7 @@ const TemplateWrapper = ({ children }) => {
         />
       </Helmet>
       <Navbar />
-      <div>{children}</div>
+      <div style={{ background: '#ffffffb8', display: 'flex', justifyContent: 'center'}}>{children}</div>
       <Footer />
     </div>
   )

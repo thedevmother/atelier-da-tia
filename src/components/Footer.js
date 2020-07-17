@@ -1,77 +1,22 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
-import logo from '../img/logo.svg'
+import footerBackground from '../img/footer-background.png'
 import facebook from '../img/social/facebook.svg'
 import instagram from '../img/social/instagram.svg'
 import twitter from '../img/social/twitter.svg'
-import vimeo from '../img/social/vimeo.svg'
 
 const Footer = class extends React.Component {
   render() {
     return (
-      <footer className="footer has-background-black has-text-white-ter">
-        <div className="content has-text-centered">
-          <img
-            src={logo}
-            alt="Kaldi"
-            style={{ width: '14em', height: '10em' }}
-          />
+      <footer style={{ position: 'relative', height: '370px', background: `url(${footerBackground}), rgba(255, 255, 255, 0.72)`, backgroundPosition: 'bottom left' }}>
+        <div className="content has-text-centered" style={{ paddingTop: '0.5em', position: 'absolute', bottom: '15px', width: '100%' }}>
+          <h4 className="dark-text">Siga nas redes sociais</h4>
         </div>
-        <div className="content has-text-centered has-background-black has-text-white-ter">
+        <div className="content has-text-centered has-background-black has-text-white-ter" style={{ position: 'absolute', bottom: '0', width: '100%', paddingTop: '12px', height: '50px' }}>
           <div className="container has-background-black has-text-white-ter">
             <div style={{ maxWidth: '100vw' }} className="columns">
               <div className="column is-4">
-                <section className="menu">
-                  <ul className="menu-list">
-                    <li>
-                      <Link to="/" className="navbar-item">
-                        Home
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/about">
-                        About
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/products">
-                        Products
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/contact/examples">
-                        Form Examples
-                      </Link>
-                    </li>
-                    <li>
-                      <a
-                        className="navbar-item"
-                        href="/admin/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Admin
-                      </a>
-                    </li>
-                  </ul>
-                </section>
-              </div>
-              <div className="column is-4">
-                <section>
-                  <ul className="menu-list">
-                    <li>
-                      <Link className="navbar-item" to="/blog">
-                        Latest Stories
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/contact">
-                        Contact
-                      </Link>
-                    </li>
-                  </ul>
-                </section>
+                
               </div>
               <div className="column is-4 social">
                 <a title="facebook" href="https://facebook.com">
@@ -93,13 +38,6 @@ const Footer = class extends React.Component {
                   <img
                     src={instagram}
                     alt="Instagram"
-                    style={{ width: '1em', height: '1em' }}
-                  />
-                </a>
-                <a title="vimeo" href="https://vimeo.com">
-                  <img
-                    src={vimeo}
-                    alt="Vimeo"
                     style={{ width: '1em', height: '1em' }}
                   />
                 </a>
